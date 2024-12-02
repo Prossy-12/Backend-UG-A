@@ -1,0 +1,139 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title UG Anfield - About Us
+  // Bootstrap CSS
+  link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css' rel='stylesheet')
+  link(rel='stylesheet' href='about.css')
+  // Custom styles
+button#scrollToTopBtn(onclick='scrollToTop()' style='display: none; position: fixed; bottom: 30px; right: 30px; z-index: 1000; background-color: #f00; color: #fff; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer;')
+  | &uarr; Top
+// Navbar
+nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+  .container
+    .container.d-flex.align-items-center
+      // Logo positioned before the text
+      a.navbar-brand.d-flex.align-items-center(href='index.html')
+        img.logo.me-2(src='images/WhatsApp Image 2024-10-25 at 12.46.37 PM.jpeg' alt='UG Anfield Logo' style='height: 40px; width: auto; position: absolute; left: 90px; top: 10px;')
+      a.navbar-brand(href='index.html') UG Anfield
+      button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      #navbarNav.collapse.navbar-collapse
+        ul.navbar-nav.ms-auto
+          li.nav-item
+            a.nav-link.active(href='about.html') About Us
+          li.nav-item
+            a.nav-link(href='membership.html') Membership
+          li.nav-item
+            a.nav-link(href='news.html') News &amp; Updates
+          li.nav-item
+            a.nav-link(href='media.html') Media
+          li.nav-item
+            a.nav-link(href='events.html') Events
+          li.nav-item
+            a.nav-link(href='partnership.html') Partnership
+          li.nav-item
+            a.nav-link(href='store.html') Store
+          li.nav-item
+            a.nav-link(href='contact.html') Contact
+          li.nav-item
+            a.nav-link.active(href='matches.html') Matches
+          // Active link for Matches
+// About Section
+section.py-5
+  .container
+    h2.text-center About UG Anfield
+    p.mt-4
+    h1 Vision
+    p
+      | &ldquo;To be the premier association for Liverpool FC supporters, fostering a global community united
+      | in passion and un wavering support for our beloved club&rdquo;
+    p
+    p.mt-4
+    h1  Mission
+    p
+      | Our mission is to bring together Liverpool FC enthusiasts from diverse backgrounds, fostering a
+      | sense of belonging, camaraderie, and pride in our shared devotion to Liverpool FC. Through
+      | organized events, community outreach, and unwavering support, we aim to contribute
+      | positively to the legacy and success of Liverpool Football Club
+    p
+    .mt-4
+      h1  OBJECTIVES
+      br
+      h5 COMMUNITY BUILDING
+      p
+        | To create a vibrant and inclusive community of Liverpool
+        | FC supporters through regular meetings, events, and online platforms
+      br
+      h5 FAN ENGAGEMENT
+      p
+        | To enhance fan engagement by providing opportunities for
+        | members to connect with the club, players, and fellow supporters
+      br
+      h5 SUPPORT FOR LIVERPOOL FC
+      p
+        | To demonstrate unwavering support for Liverpool
+        | FC through organized match screenings, fan gatherings, and active participation in club
+        | activities
+      br
+      h5  CHARITABLE INITIATIES
+      p
+        | To engage in charitable initiatives and community
+        | outreach programs that reflects the values and ethos of Liverpool FC
+      br
+      h5 PROMOTION OF SPORTSMANSHIP
+      p
+        | To promote sportsmanship, fair play, and respect for the game of football among members and
+        | the wider community
+      br
+      h5 CULTURAL EXCHANGE
+      p
+        | To facilitate cultural exchange and understanding through
+        | interactions with Liverpool FC supporters worldwide.
+    .mt-4
+      h1  CORE VALUES
+      br
+      h5 PASSION
+      p
+        | we are driven by an unyielding passion for Liverpool FC, embodying the spirit of
+        | the club in everything we do
+      br
+      h5 UNITY
+      p
+        | we believe in the power of unity and collaboration, uniting fans from diverse
+        | backgrounds under the common banner of Liverpool FC
+      br
+      h5 RESPECT
+      p
+        | We uphold the values of respect, tolerance, and inclusivity, fostering a
+        | welcoming and respectful environment for all members
+      br
+      h5 INTEGRITY
+      p
+        | We conduct ourselves with honesty, integrity, and transparency in all our
+        | interactions, both within the association and in our wider community
+      br
+      h5 EXCELLENCE
+      p
+        | We strive for excellence in all aspects of our activities, aiming to achieve
+        | the highest standards of professionalism and performance
+      br
+      h5 COMMUNITY
+      p
+        | We are committed to giving back to our community, supporting charitable
+        | causes, and making a positive impact beyond the realm of football.
+// Footer
+footer.bg-dark.text-white.text-center.p-3
+  .container
+    p
+      | Contact: info@uganfield.com | Follow us: 
+      a.text-white(href=' https://tiktok.com/@ug.anfield.official') Tiktok
+      | , 
+      a.text-white(href='https://chat.whatsapp.com/IwDs17g4SsQ7MjDrHupncl') WhatsApp
+      a.text-white(href='https://www.instagram.com/uganfield?igsh=ZGUzMzM3NWJiOQ==') Instagram
+      a.text-white(href='https://www.facebook.com/profile.php?id=61566677184223') Facebook
+    p &copy; 2024 UG Anfield. All rights reserved.
+// Bootstrap JS
+script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js')
+script(src='about.js')

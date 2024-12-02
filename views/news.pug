@@ -1,0 +1,114 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title UG Anfield - News
+  // Bootstrap CSS
+  link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css' rel='stylesheet')
+  link(rel='stylesheet' href='news.css')
+  // Custom styles if you have
+button#scrollToTopBtn(onclick='scrollToTop()' style='display: none; position: fixed; bottom: 30px; right: 30px; z-index: 1000; background-color: #f00; color: #fff; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer;')
+  | &uarr; Top
+// Navbar
+nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.py-2
+  .container.d-flex.align-items-center
+    // Logo positioned before the text
+    a.navbar-brand.d-flex.align-items-center(href='index.html')
+      img.logo.me-2(src='images/WhatsApp Image 2024-10-25 at 12.46.37 PM.jpeg' alt='UG Anfield Logo' style='height: 40px; width: auto; position: absolute; left: 90px; top: 10px;')
+    a.navbar-brand(href='index.html') UG Anfield
+    button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    // Navbar links
+    #navbarNav.collapse.navbar-collapse
+      ul.navbar-nav.ms-auto
+        li.nav-item
+          a.nav-link(href='about.html') About Us
+        li.nav-item
+          a.nav-link.active(href='news.html') News &amp; Updates
+        li.nav-item
+          a.nav-link(href='membership.html') Membership
+        li.nav-item
+          a.nav-link(href='media.html') Media
+        li.nav-item
+          a.nav-link(href='events.html') Events
+        li.nav-item
+          a.nav-link(href='partnership.html') Partnership
+        li.nav-item
+          a.nav-link(href='store.html') Store
+        li.nav-item
+          a.nav-link(href='contact.html') Contact
+        li.nav-item
+          a.nav-link.active(href='matches.html') Matches
+        // Active link for Matches
+// News Section
+section.py-5
+  .container
+    h1.text-center.mb-5 Latest News and Updates
+    .row
+      // News Article 1: Liverpool's Latest Victory
+      .col-md-4
+        .card.mb-4
+          img.card-img-top(src='images/WhatsApp Image 2024-11-18 at 11.32.40_22383707.jpg' alt="Liverpool's Latest Victory")
+          .card-body
+            h5.card-title Liverpool&apos;s Latest Victory
+            p.card-text
+              | Liverpool&apos;s recent 2-1 win against Chelsea saw them regain the top spot in the Premier League. Mohamed Salah scored a penalty and assisted Curtis Jones for the decisive goal.
+            a.btn.btn-danger(href='https://www.skysports.com/liverpool-results') Read More
+      // News Article 2: Transfer Rumors: Who's Next?
+      .col-md-4
+        .card.mb-4
+          img.card-img-top(src='images/WhatsApp Image 2024-11-18 at 11.32.02_e22f0e31.jpg' alt='Transfer Rumors')
+          .card-body
+            h5.card-title Transfer Rumors: Who&apos;s Next?
+            p.card-text
+              | Liverpool is eyeing young talent Arda G&uuml;ler from Real Madrid to strengthen their midfield. The club is also exploring defensive reinforcements.
+            a.btn.btn-danger(href='https://www.skysports.com/football/transfer-news') Read More
+      // News Article 3: Upcoming Fixtures and Previews
+      .col-md-4
+        .card.mb-4
+          img.card-img-top(src='images/WhatsApp Image 2024-11-18 at 11.41.55_04e653ee.jpg' alt='Upcoming Fixtures')
+          .card-body
+            h5.card-title Upcoming Fixtures and Previews
+            p.card-text
+              | Liverpool faces key matches, including a Champions League clash against RB Leipzig and a Premier League showdown with Arsenal.
+            a.btn.btn-danger(href='https://www.liverpoolfc.com/fixtures/mens/2024') Read More
+    .row
+      // News Article 4: Fan Stories: Ugandan Reds in Action
+      .col-md-4
+        .card.mb-4
+          img.card-img-top(src='images/WhatsApp Image 2024-11-18 at 11.30.57_ed16176f.jpg' alt='Ugandan Reds')
+          .card-body
+            h5.card-title Fan Stories: Ugandan Reds in Action
+            p.card-text A spotlight on Ugandan Liverpool fans and their passionate support for the team.
+            a.btn.btn-danger(href='ugandan-reds.html') Read More
+      // News Article 5: Post-Match Interviews
+      .col-md-4
+        .card.mb-4
+          img.card-img-top(src='images/coc.jpg' alt='Post-Match Interviews')
+          .card-body
+            h5.card-title Post-Match Interviews
+            p.card-text
+              | Catch interviews with manager J&uuml;rgen Klopp and key Liverpool players following their recent victories.
+            a.btn.btn-danger(href='https://www.youtube.com/live/e0GQGGjUfW4?si=S3J0zGl_GbM4OVZt') Read More
+      // News Article 6: Upcoming Ug Anfield Events
+      .col-md-4
+        .card.mb-4
+          img.card-img-top(src='images/fans.jpg' alt='Upcoming Events')
+          .card-body
+            h5.card-title Upcoming Ug Anfield Events
+            p.card-text
+              | Join us for upcoming events and watch parties for Liverpool fans in Uganda. Don&apos;t miss out!
+            a.btn.btn-danger(href='ug-anfield-events.html') Read More
+// Footer
+footer.bg-dark.text-white.text-center.p-3
+  .container
+    p
+      | Contact: info@uganfield.com | Follow us: 
+      a.text-white(href=' https://tiktok.com/@ug.anfield.official') Tiktok
+      | , 
+      a.text-white(href='https://chat.whatsapp.com/IwDs17g4SsQ7MjDrHupncl') WhatsApp
+      a.text-white(href='https://www.instagram.com/uganfield?igsh=ZGUzMzM3NWJiOQ==') Instagram
+      a.text-white(href='https://www.facebook.com/profile.php?id=61566677184223') Facebook
+    p &copy; 2024 Ug Anfield. All rights reserved.
+// Bootstrap JS
+script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js')
