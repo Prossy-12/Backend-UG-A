@@ -1,0 +1,208 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif; /* Clean modern font */
+    color: #333; /* Neutral text color for readability */
+
+    /* Watermark Background */
+    background: url('images/wwliv.webp') no-repeat center center fixed;
+    background-size: cover; /* Adjust size for a watermark effect */
+    background-color: #f9f9f9b0; /* Fallback color */
+    background-blend-mode: overlay; /* Blend image with a subtle effect */
+}
+
+
+/* Navbar Styling */
+.navbar {
+    background-color: #660000; /* Dark maroon for contrast */
+    box-shadow: 0 2px 4px white
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    color:white !important;
+    margin: 0 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: red !important; /* Light maroon */
+}
+
+.navbar-brand img {
+    height: 40px;
+    width: auto;
+}
+
+/* Section Titles */
+h1, h2 {
+    text-align: center;
+    color: rgb(114, 7, 7);
+    font-weight: 900; /* Maximum boldness */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5), 1px 1px 3px rgba(255, 255, 255, 0.2); /* Enhanced shadow for depth */
+    font-size: 2.5rem; /* Adjust size as needed */
+    letter-spacing: 1px; /* Slight spacing for elegance */
+}
+
+/* Table Container */
+.table-responsive {
+    margin: 20px 0;
+}
+
+/* Table Styling */
+.table {
+    background-color: #fff;
+    color: #333;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Table Header */
+.table th {
+    background: linear-gradient(135deg, #800000, #a52a2a); /* Gradient header */
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    padding: 12px;
+    border: none;
+}
+
+/* Table Body Rows */
+.table td {
+    padding: 12px;
+    text-align: center;
+    border: none;
+    font-size: 0.95rem;
+    vertical-align: middle;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease;
+}
+
+/* Alternating Row Colors */
+.table tr:nth-child(even) td {
+    background-color: #f2f2f2;
+}
+
+/* Hover Effect for Rows */
+.table tr:hover td {
+    background-color: #ffd6d6; /* Light maroon hover effect */
+    cursor: pointer;
+}
+
+/* Table Border (Bottom Row Highlight) */
+.table tbody tr td:first-child {
+    border-left: 4px solid #800000; /* Maroon accent on the left */
+}
+
+.table tbody tr td:last-child {
+    border-right: 4px solid #800000;
+}
+
+/* Rounded Edges for First and Last Row */
+.table thead th:first-child {
+    border-top-left-radius: 12px;
+}
+
+.table thead th:last-child {
+    border-top-right-radius: 12px;
+}
+
+.table tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 12px;
+}
+
+.table tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 12px;
+}
+
+/* Highlight for Past Matches */
+.table tbody tr td:nth-child(5) {
+    font-weight: bold;
+    color: #660000;
+}
+
+/* Fancy Border for Past Match Results */
+.table tbody tr td:nth-child(5):not(:empty) {
+    background-color: #fff3f3; /* Soft highlight for results */
+    border: 2px solid #800000; /* Maroon border */
+    border-radius: 6px;
+    padding: 6px 12px;
+    display: inline-block;
+}
+
+/* Match Preview Cards */
+.card {
+    border: none;
+    background-color: #fff; /* White */
+    color: #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.card-title {
+    color: rgb(134, 13, 13);
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 0.95rem;
+    color: black;
+}
+
+.btn-danger {
+    background-color: #660000;
+    border: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-danger:hover {
+    background-color: #a52a2a;
+}
+
+/* Footer */
+footer {
+    background-color: #660000;
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: underline;
+    transition: color 0.3s ease-in-out;
+}
+
+footer a:hover {
+    color: #ffd6d6;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .table {
+        font-size: 0.9rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}

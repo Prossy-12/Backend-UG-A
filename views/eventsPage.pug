@@ -1,0 +1,117 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title UG Anfield Events
+  // Bootstrap CSS
+  link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css' rel='stylesheet')
+  // Custom CSS
+  link(rel='stylesheet' href='/css/about.css')
+// Navbar Section
+nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+  .container
+    // Navbar Branding
+    a.navbar-brand.d-flex.align-items-center(href='index.html')
+      img.me-2(src='images/logo.jpeg' alt='logo' style='height: 40px; width: auto;')
+    a.navbar-brand(herf='/') UG Anfield
+    // Navbar Toggle Button for Mobile
+    button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    // Navbar Menu Links
+    #navbarNav.collapse.navbar-collapse
+      ul.navbar-nav.ms-auto
+        li.nav-item
+          a.nav-link(href='/about') About Us
+          li.nav-item
+            a.nav-link(href='/membership') Membership
+          li.nav-item
+            a.nav-link(href='/news') News &amp; Updates
+          li.nav-item
+            a.nav-link(href='/media') Media
+          li.nav-item
+            a.nav-link(href='/events') Events
+          li.nav-item
+            a.nav-link(href='/partnership') Partnership
+          li.nav-item
+            a.nav-link(href='/contact') Contact
+          li.nav-item
+            a.nav-link.active(href='/matches') Matches
+// Hero Banner Section
+section.hero-banner.text-center.text-white.d-flex.justify-content-center.align-items-center(style="background-image: url('images/events-hero.jpg'); background-size: cover; height: 50vh;")
+  .overlay(style='background-color: rgba(0, 0, 0, 0.5); padding: 20px;')
+    h1 UG Anfield Events
+    p
+      | Join us in celebrating Liverpool FC together with the UG Anfield family! Stay tuned for our exciting events.
+// Events Content Section
+.container.my-5
+  h3 Upcoming Events
+  .events-container
+    // Event 1
+    .card
+      img(src='images/ugaf.jpg' alt='End of Year Party')
+      .card-body
+        h5.card-title End of Year Party (UG Anfield)
+        p.card-text Enjoy a fun-filled event with Liverpool fans from UG Anfield.
+        p
+          strong Date:
+          |  December 15, 2024
+        p
+          strong Location:
+          |  White Sand Beach, Entebbe
+        a.btn.btn-primary(href='#') More Details
+    // Event 2
+    .card
+      img(src='images/event2.jpg' alt='Fan Meetup')
+      .card-body
+        h5.card-title Fan Meetup: Liverpool FC &amp; Beyond
+        p.card-text
+          | Join us for a casual meetup to discuss all things Liverpool FC and connect with fellow fans.
+        p
+          strong Date:
+          |  December 5, 2024
+        p
+          strong Location:
+          |  Kampala Central Park
+        a.btn.btn-primary(href='#') More Details
+  h3 Past Events
+  .events-container
+    // Event 3
+    .card
+      img(src='images/UgA goat.jpg' alt='Visit to Masaka')
+      .card-body
+        h5.card-title Visit to Masaka
+        p.card-text
+          | UG Anfield fans had an amazing visit to Masaka, including a friendly match where they won a goat!
+        p
+          strong Date:
+          |  October 15, 2024
+        p
+          strong Location:
+          |  Masaka
+        a.btn.btn-secondary(href='#') View Recap
+    // Event 4
+    .card
+      img(src='images/UgA red.jpg' alt='Tour in Jinja')
+      .card-body
+        h5.card-title Tour in Jinja
+        p.card-text UG Anfield members enjoyed a thrilling tour in Jinja.
+        p
+          strong Date:
+          |  September 28, 2024
+        p
+          strong Location:
+          |  Jinja
+        a.btn.btn-secondary(href='#') View Recap
+// Footer Section
+footer.bg-dark.text-white.text-center.p-3
+  .container
+    p
+      | Contact us at: 
+      a.text-white(href='mailto:info@uganfield.com') info@uganfield.com
+      |  | Follow us on: 
+      a.text-white(href='#') Facebook
+      | , 
+      a.text-white(href='#') Twitter
+    p &copy; 2024 UG Anfield. All rights reserved.
+// Bootstrap JS
+script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js')

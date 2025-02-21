@@ -1,0 +1,99 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #800000 0%, #a52a2a 100%); /* Maroon gradient */
+    color: #fff; /* Default text color */
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #660000; /* Darker maroon for contrast */
+    padding: 10px 15px;
+}
+
+.nav-link {
+    color: #fff !important; /* White text */
+    margin: 0 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: red!important; 
+}
+
+/* Section Titles */
+h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    text-shadow: 2px 2px #660000; /* Subtle shadow */
+}
+
+/* News Cards */
+.card {
+    border: none;
+    background-color: #fff; /* White */
+    color: #333; /* Dark text */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Zoom effect */
+}
+
+.card-title {
+    color: rgb(178, 6, 6); /* Dark maroon */
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 0.95rem;
+    color: #555; /* Gray text */
+}
+
+.btn-danger {
+    background-color: #660000; /* Custom dark maroon */
+    border: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-danger:hover {
+    background-color: #a52a2a; /* Brighter maroon */
+}
+
+/* Scroll to Top Button */
+#scrollToTopBtn {
+    background-color: #660000; /* Dark maroon */
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+#scrollToTopBtn:hover {
+    background-color: #a52a2a; /* Brighter maroon */
+}
+
+/* Footer */
+footer {
+    background-color: #660000; /* Dark maroon */
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: red;
+}

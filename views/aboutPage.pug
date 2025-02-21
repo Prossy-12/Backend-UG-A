@@ -5,7 +5,7 @@ head
   title UG Anfield - About Us
   // Bootstrap CSS
   link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css' rel='stylesheet')
-  link(rel='stylesheet' href='about.css')
+  link(rel='stylesheet' href='/css/about.css')
   // Custom styles
 button#scrollToTopBtn(onclick='scrollToTop()' style='display: none; position: fixed; bottom: 30px; right: 30px; z-index: 1000; background-color: #f00; color: #fff; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer;')
   | &uarr; Top
@@ -15,31 +15,30 @@ nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
     .container.d-flex.align-items-center
       // Logo positioned before the text
       a.navbar-brand.d-flex.align-items-center(href='index.html')
-        img.logo.me-2(src='images/WhatsApp Image 2024-10-25 at 12.46.37 PM.jpeg' alt='UG Anfield Logo' style='height: 40px; width: auto; position: absolute; left: 90px; top: 10px;')
-      a.navbar-brand(href='index.html') UG Anfield
+        img.logo.me-2(src='images/logo.jpeg' alt='logo' style='height: 40px; width: auto; position: absolute; left: 90px; top: 10px;')
+      a.navbar-brand(href='/home') UG Anfield
       button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
         span.navbar-toggler-icon
       #navbarNav.collapse.navbar-collapse
         ul.navbar-nav.ms-auto
           li.nav-item
-            a.nav-link.active(href='about.html') About Us
+            a.nav-link(href='/about') About Us
           li.nav-item
-            a.nav-link(href='membership.html') Membership
+            a.nav-link(href='/membership') Membership
           li.nav-item
-            a.nav-link(href='news.html') News &amp; Updates
+            a.nav-link(href='/news') News &amp; Updates
           li.nav-item
-            a.nav-link(href='media.html') Media
+            a.nav-link(href='/media') Media
           li.nav-item
-            a.nav-link(href='events.html') Events
+            a.nav-link(href='/events') Events
           li.nav-item
-            a.nav-link(href='partnership.html') Partnership
+            a.nav-link(href='/partnership') Partnership
           li.nav-item
-            a.nav-link(href='store.html') Store
+            a.nav-link(href='/contact') Contact
           li.nav-item
-            a.nav-link(href='contact.html') Contact
-          li.nav-item
-            a.nav-link.active(href='matches.html') Matches
+            a.nav-link.active(href='/matches') Matches
           // Active link for Matches
+    
 // About Section
 section.py-5
   .container

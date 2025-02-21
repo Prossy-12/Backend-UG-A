@@ -1,0 +1,172 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Watermark Background */
+body::before {
+    content: "UG Anfield";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('/images/wwliv.webp'); /* Ensure this path is correct */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.2;
+    z-index: -1;
+    pointer-events: none;
+    user-select: none;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    color:rgba(0, 0, 0, 0.5);
+}
+.container.my-5::before {
+    content: "UG Anfield";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    color: rgba(214, 40, 40, 0.05); /* Adjust opacity if needed */
+    z-index: -1;
+    pointer-events: none;
+    user-select: none;
+}
+
+/* Headings */
+h1, h2 {
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #111;
+    
+}
+
+ .navbar-brand {
+    font-weight: bold;
+    color: red;
+    
+}
+
+.navbar-nav .nav-links {
+    color: #ddd;
+    transition: color 0.3s;
+}
+
+
+
+/* Navbar hover effect */
+.navbar .nav-link:hover {
+    color: red;
+    box-shadow: 0 0 5px #FF0000, 0 0 10px #FF0000, 0 0 15px #FF0000;
+    transform: scale(1.05);
+}
+
+.navbar .nav-link:active {
+    transform: scale(0.95);
+}
+
+/* Hero Banner */
+.hero-banner {
+    background-image: url('images/media-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-banner .overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+}
+
+.hero-banner h1 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    margin-bottom: 1rem;
+}
+
+.hero-banner p {
+    font-size: 1.25rem;
+}
+
+/* Image Carousel */
+.image-carousel {
+    margin-top: 40px;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    color: #fff;
+}
+
+.carousel-caption h5 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.carousel-caption p {
+    font-size: 1.1rem;
+}
+
+/* Video Gallery */
+.video-gallery iframe {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 20px;
+}
+
+/* Blog Section */
+.blog .card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.blog .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Footer */
+footer {
+    color:white;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 0.5rem 0;
+}
+
+footer a {
+    color: white; /* Set link color to white */
+    text-decoration: none;
+    transition: color 0.3s ease;
+    margin-left: 0.5rem;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: red;
+}

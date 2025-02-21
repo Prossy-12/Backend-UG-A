@@ -1,0 +1,54 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title UG Anfield - Partnership
+  link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css' rel='stylesheet')
+  link(rel='stylesheet' href='/css/partnership.css')
+// Navbar
+nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+  .container
+    a.navbar-brand.d-flex.align-items-center(href='index.html')
+      img.logo.me-2(src='images/logo.jpeg' alt='logo' style='height: 40px;')
+    a.navbar-brand(herf='/') UG Anfield
+    button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    #navbarNav.collapse.navbar-collapse
+      ul.navbar-nav.ms-auto
+        a.nav-link(href='/about') About Us
+          li.nav-item
+            a.nav-link(href='/membership') Membership
+          li.nav-item
+            a.nav-link(href='/news') News &amp; Updates
+          li.nav-item
+            a.nav-link(href='/media') Media
+          li.nav-item
+            a.nav-link(href='/events') Events
+          li.nav-item
+            a.nav-link(href='/partnership') Partnership
+          li.nav-item
+            a.nav-link(href='/contact') Contact
+          li.nav-item
+            a.nav-link.active(href='/matches') Matches
+// Partnerships Content
+.container.my-5
+  h1 Partnerships
+  p
+    | We are grateful to our partners and sponsors for supporting UG Anfield&apos;s mission and activities.
+  h2 Our Partners
+  // List of partners here
+  h2 Become a Partner
+  p Interested in partnering with UG Anfield? Contact us for more information.
+// Footer
+footer.bg-dark.text-white.text-center.p-3
+  .container
+    p
+      | Contact: info@uganfield.com | Follow us: 
+      a.text-white(href='https://tiktok.com/@ug.anfield.official') Tiktok
+      | , 
+      a.text-white(href='https://chat.whatsapp.com/IwDs17g4SsQ7MjDrHupncl') WhatsApp
+      a.text-white(href='https://www.instagram.com/uganfield?igsh=ZGUzMzM3NWJiOQ==') Instagram
+      a.text-white(href='https://www.facebook.com/profile.php?id=61566677184223') Facebook
+    p &copy; 2024 Ug Anfield. All rights reserved.
+// Bootstrap JS
+script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js')

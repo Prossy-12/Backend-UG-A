@@ -1,0 +1,124 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title UG Anfield Media
+  // Bootstrap CSS
+  link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css' rel='stylesheet')
+  link(rel='stylesheet' href='/css/media.css')
+  // Custom styles
+// Navbar Section
+nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.py-2
+  .container.d-flex.align-items-center
+    // Logo
+    a.navbar-brand.d-flex.align-items-center(href='/home')
+      img.logo.me-2(src='images/logo.jpeg' alt='logo' style='height: 40px; width: auto;')
+      a.navbar-brand(href ='/') UG Anfield
+    // Navbar Toggler
+    button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    // Navbar Links
+    #navbarNav.collapse.navbar-collapse
+      ul.navbar-nav.ms-auto
+        li.nav-item
+          a.nav-link(href='/about') About Us
+          li.nav-item
+            a.nav-link(href='/membership') Membership
+          li.nav-item
+            a.nav-link(href='/news') News &amp; Updates
+          li.nav-item
+            a.nav-link(href='/media') Media
+          li.nav-item
+            a.nav-link(href='/events') Events
+          li.nav-item
+            a.nav-link(href='/partnership') Partnership
+            li.nav-item
+            a.nav-link(href='/contact') Contact
+          li.nav-item
+            a.nav-link.active(href='/matches') Matches
+// Hero Section
+section.hero-section
+  .text-center.mb-4
+    h1.display-4 Welcome to UG Anfield Media
+    p.lead Relive the best moments with the Ugandan Liverpool Supporters Club
+// Gallery Section
+.container.my-5
+  h2.gallery-title.text-center Gallery
+  p.text-center Explore our photos and match highlights!
+  // Filters
+  .text-center.mb-4
+    button.btn.btn-danger.btn-filter(data-filter='all') All
+    button.btn.btn-danger.btn-filter(data-filter='photos') Photos
+    button.btn.btn-danger.btn-filter(data-filter='highlights') Highlights
+  // Media Grid
+  #media-grid.row.g-4.media-grid
+    // Photo Items
+    .col-sm-6.col-md-4.media-item(data-category='photos')
+      img.img-fluid.rounded(src='images/1.jpg' alt='Media Image 1')
+    .col-sm-6.col-md-4.media-item(data-category='photos')
+      img.img-fluid.rounded(src='images/10.jpg' alt='Media Image 2')
+    .col-sm-6.col-md-4.media-item(data-category='photos')
+      img.img-fluid.rounded(src='images/11.jpg' alt='Media Image 3')
+    .col-sm-6.col-md-4.media-item(data-category='photos')
+      img.img-fluid.rounded(src='images/5.jpg' alt='Media Image 3')
+    .col-sm-6.col-md-4.media-item(c='' data-category='photos')
+      img.img-fluid.rounded(src='images/14.jpg' alt='Media Image 3')
+    .col-sm-6.col-md-4.media-item(data-category='photos')
+      img.img-fluid.rounded(src='images/13.jpg' alt='Media Image 3')
+    .col-sm-6.col-md-4.media-item(data-category='photos')
+      img.img-fluid.rounded(src='images/15.jpg' alt='Media Image 3')
+    .col-sm-6.col-md-4.media-item(data-category='photos')
+      img.img-fluid.rounded(src='images/17.jpg' alt='Media Image 3')
+    .col-sm-6.col-md-4.media-item(data-category='photos')
+      img.img-fluid.rounded(src='images/16.jpg' alt='Media Image 3')
+    .col-sm-6.col-md-4.media-item(data-category='photos')
+      img.img-fluid.rounded(src='images/8.jpg' alt='Media Image 3')
+    .col-sm-6.col-md-4.media-item(data-category='photos')
+      img.img-fluid.rounded(src='images/7.jpg' alt='Media Image 3')
+    .col-sm-6.col-md-4.media-item(data-category='photos')
+      img.img-fluid.rounded(src='images/12.jpg' alt='Media Image 3')
+    .col-sm-6.col-md-4.media-item(data-category='photos')
+      img.img-fluid.rounded(src='images/6.jpg' alt='Media Image 3')
+    .col-sm-6.col-md-4.media-item(data-category='photos')
+      img.img-fluid.rounded(src='images/9.jpg' alt='Media Image 3')
+    .col-sm-6.col-md-4.media-item(data-category='photos')
+      img.img-fluid.rounded(src='images/4.jpg' alt='Media Image 3')
+    .col-sm-6.col-md-4.media-item(data-category='photos')
+      img.img-fluid.rounded(src='images/3.jpg' alt='Media Image 3')
+    .col-sm-6.col-md-4.media-item(data-category='photos')
+      img.img-fluid.rounded(src='images/white.jpg' alt='Media Image 3')
+    .col-sm-6.col-md-4.media-item(data-category='photos')
+      img.img-fluid.rounded(src='images/2q.jpg' alt='Media Image 3')
+    // Highlight Items
+    .col-sm-6.col-md-4.media-item(data-category='highlights')
+      img.img-fluid.rounded(src='images/highlight1.jpg' alt='Highlight 1')
+      p.mt-2.text-center
+    .col-sm-6.col-md-4.media-item(data-category='highlights')
+      img.img-fluid.rounded(src='images/highlight2.jpg' alt='Highlight 2')
+      p.mt-2.text-center
+// Footer Section
+footer.bg-dark.text-white.text-center.p-3
+  .container
+    p
+      | Contact us at: 
+      a.text-white(href='mailto:info@uganfield.com') info@uganfield.com
+      |  | Follow us on: 
+      a.text-white(href='https://tiktok.com/@ug.anfield.official') TikTok
+      | , 
+      a.text-white(href='https://www.instagram.com/uganfield?igsh=ZGUzMzM3NWJiOQ==') Instagram
+      | , 
+      a.text-white(href='https://www.facebook.com/profile.php?id=61566677184223') Facebook
+      a.text-white(href='https://chat.whatsapp.com/IwDs17g4SsQ7MjDrHupncl') WhatsApp
+    p &copy; 2024 UG Anfield. All rights reserved.
+// Bootstrap JS
+script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js')
+script.
+  // Filter functionality
+  document.querySelectorAll('.btn-filter').forEach(button => {
+  button.addEventListener('click', () => {
+  const filter = button.getAttribute('data-filter');
+  document.querySelectorAll('.media-item').forEach(item => {
+  item.style.display = (filter === 'all' || item.getAttribute('data-category') === filter) ? 'block' : 'none';
+  });
+  });
+  });
