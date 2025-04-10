@@ -32,4 +32,7 @@ router.get("/events", (req, res) => {
   res.render("eventsPage"); // pug file to be displayed
 });
 
+router.get("/news", (req ,res) =>{
+  res.render("newsPage");
+})
 module.exports = router;

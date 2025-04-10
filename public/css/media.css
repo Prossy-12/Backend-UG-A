@@ -14,23 +14,20 @@ body {
 
 /* Watermark Background */
 body::before {
-    content: "UG Anfield";
+    content: "";
     position: fixed;
     top: 50%;
     left: 50%;
     width: 100vw;
     height: 100vh;
-    background-image: url('/images/wwliv.webp'); /* Ensure this path is correct */
-    background-size: cover;
+    background-image: url('/images/logo.jpeg');
+    background-size: 40%;
     background-repeat: no-repeat;
     background-position: center;
-    opacity: 0.2;
+    opacity: 0.05;
     z-index: -1;
-    pointer-events: none;
-    user-select: none;
     transform: translate(-50%, -50%);
-    font-size: 4rem;
-    color:rgba(0, 0, 0, 0.5);
+    pointer-events: none;
 }
 .container.my-5::before {
     content: "UG Anfield";

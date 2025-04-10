@@ -1,39 +1,24 @@
-/* Neon red glow effect */
-.btn:hover {
-    box-shadow: 0 0 5px #FF0000, 0 0 10px #FF0000, 0 0 15px #FF0000, 0 0 20px #FF0000;
-    transform: scale(1.05);
-    /* Slightly enlarges button on hover */
-}
-
-.btn:active {
-    transform: scale(0.95);
-    /* Shrinks button slightly when clicked */
-}
-
-
-
-/* Increase button size */
-.btn {
-    padding: 15px 20px;
-    /* Adjust padding to increase button size */
-    font-size: 18px;
-    /* Increase font size */
-    border-radius: 5px;
-    /* Optional: Adjust border radius for rounded corners */
-}
-
-
-
-
-
-/* General Reset */
-* {
+/* ================ */
+/* VARIABLES        */
+/* ================ */
+:root {
+    --primary-color: #FF0000; /* Red */
+    --dark-bg: #111;
+    --text-light: #fff;
+    --text-dark: #000;
+    --transition: all 0.3s ease;
+  }
+  
+  /* ================ */
+  /* BASE STYLES      */
+  /* ================ */
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
+  }
+  
+  body {
     font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
@@ -42,145 +27,142 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    color: black;
+    color: var(--text-dark);
     text-align: center;
-    text-decoration: solid;
-}
-
-/* Header and Logo */
-header {
-    position: relative;
-    /* Make header position relative for absolute positioning of logo */
-    text-align: center;
-    /* Center the text and logo in the header */
-}
-
-.logo {
-    position: absolute;
-    /* Position logo absolutely */
-    top: 20px;
-    /* Adjust top position as needed */
-    left: 50%;
-    /* Center logo horizontally */
-    transform: translateX(-50%);
-    /* Center the logo by adjusting the left position */
-    width: 100px;
-    /* Adjust the size of the logo */
-    height: auto;
-    /* Maintain aspect ratio */
-
-}
-
-/* Reduce the padding in navbar for a thinner look */
-.navbar {
-    padding-top: 0.2rem;
-    padding-bottom: 0.2rem;
-
-}
-
-.logo {
-    height: 40px;
-    /* Adjust to your desired logo height */
-    width: auto;
-    text-align: left;
-}
-
-.navbar-brand h2 {
-    font-size: 1.25rem;
-    /* Adjust to keep the title smaller */
-    margin: 0;
-}
-
-
-/* Centered Text on Hero Section */
-header h1,
-header p {
-    color: black;
-}
-
-.cta-buttons {
-    text-align: center;
-}
-
-/* Ensure the main content grows to push the footer down */
-main {
+  }
+  
+  /* ================ */
+  /* LAYOUT           */
+  /* ================ */
+  main {
     flex-grow: 1;
-}
-
-/* Navbar */
-.navbar {
-    background-color: #111;
-}
-
-.navbar .navbar-brand {
+  }
+  
+  /* ================ */
+  /* HEADER & NAVBAR  */
+  /* ================ */
+  header {
+    position: relative;
+    text-align: center;
+  }
+  
+  .navbar {
+    background-color: var(--dark-bg);
+    padding: 0.2rem 0;
+  }
+  
+  .navbar-brand h2 {
+    font-size: 1.25rem;
+    margin: 0;
+  }
+  
+  .nav-link {
     font-weight: bold;
-}
-
-.navbar .nav-link {
-    font-weight: bold;
-    color: #fff;
-    transition: color 0.3s ease;
-}
-
-.navbar .nav-link:hover {
-    color: red;
-    /* Ugandan flag-inspired yellow */
-}
-
-/* Hero Section */
-.hero {
+    color: var(--text-light);
+    transition: var(--transition);
+  }
+  
+  .nav-link:hover {
+    color: var(--primary-color);
+  }
+  
+  .logo {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: auto;
+  }
+  
+  /* Alternative logo style (duplicate in original removed) */
+  .navbar .logo {
+    height: 40px;
+    width: auto;
+  }
+  
+  /* ================ */
+  /* HERO SECTION     */
+  /* ================ */
+  .hero {
     background-color: rgba(0, 0, 0, 0.5);
     background-blend-mode: darken;
     background-size: cover;
     padding: 4rem 0;
-    text-align: center;
-}
-
-.hero h2 {
+  }
+  
+  .hero h2 {
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 1rem;
-}
-
-.hero p {
+  }
+  
+  .hero p {
     font-size: 1.2rem;
-}
-
-.hero .cta-buttons .btn {
+  }
+  
+  .cta-buttons {
+    text-align: center;
+  }
+  
+  .cta-buttons .btn {
     color: #333;
     font-weight: bold;
     margin: 0.5rem;
-}
-
-.hero .cta-buttons .btn:hover {
-    background-color: red;
-    color: #000;
-}
-
-/* Footer */
-footer {
-    background-color: #111;
-    color: white;
+  }
+  
+  .cta-buttons .btn:hover {
+    background-color: var(--primary-color);
+    color: var(--text-dark);
+  }
+  
+  /* ================ */
+  /* BUTTONS          */
+  /* ================ */
+  .btn {
+    padding: 15px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: var(--transition);
+  }
+  
+  .btn:hover {
+    box-shadow: 0 0 5px var(--primary-color), 
+                0 0 10px var(--primary-color), 
+                0 0 15px var(--primary-color), 
+                0 0 20px var(--primary-color);
+    transform: scale(1.05);
+  }
+  
+  .btn:active {
+    transform: scale(0.95);
+  }
+  
+  /* ================ */
+  /* FOOTER           */
+  /* ================ */
+  footer {
+    background-color: var(--dark-bg);
+    color: var(--text-light);
     font-size: 0.9rem;
     padding: 1.5rem 0;
     text-align: center;
     width: 100%;
     margin-top: auto;
-    /* Pushes footer to the bottom */
-}
-
-footer p {
+  }
+  
+  footer p {
     margin: 0.5rem 0;
-}
-
-footer a {
-    color: red;
+  }
+  
+  footer a {
+    color: var(--primary-color);
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: var(--transition);
     margin-left: 0.5rem;
     font-weight: bold;
-}
-
-footer a:hover {
+  }
+  
+  footer a:hover {
     text-decoration: underline;
-}
+  }

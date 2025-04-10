@@ -36,75 +36,52 @@ nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
             a.nav-link(href='/contact') Contact
           li.nav-item
             a.nav-link.active(href='/matches') Matches
-// Hero Banner Section
-section.hero-banner.text-center.text-white.d-flex.justify-content-center.align-items-center(style="background-image: url('images/events-hero.jpg'); background-size: cover; height: 50vh;")
-  .overlay(style='background-color: rgba(0, 0, 0, 0.5); padding: 20px;')
-    h1 UG Anfield Events
-    p
-      | Join us in celebrating Liverpool FC together with the UG Anfield family! Stay tuned for our exciting events.
-// Events Content Section
 .container.my-5
-  h3 Upcoming Events
-  .events-container
-    // Event 1
-    .card
-      img(src='images/ugaf.jpg' alt='End of Year Party')
-      .card-body
-        h5.card-title End of Year Party (UG Anfield)
-        p.card-text Enjoy a fun-filled event with Liverpool fans from UG Anfield.
-        p
-          strong Date:
-          |  December 15, 2024
-        p
-          strong Location:
-          |  White Sand Beach, Entebbe
-        a.btn.btn-primary(href='#') More Details
-    // Event 2
-    .card
-      img(src='images/event2.jpg' alt='Fan Meetup')
-      .card-body
-        h5.card-title Fan Meetup: Liverpool FC &amp; Beyond
-        p.card-text
-          | Join us for a casual meetup to discuss all things Liverpool FC and connect with fellow fans.
-        p
-          strong Date:
-          |  December 5, 2024
-        p
-          strong Location:
-          |  Kampala Central Park
-        a.btn.btn-primary(href='#') More Details
-  h3 Past Events
-  .events-container
-    // Event 3
-    .card
-      img(src='images/UgA goat.jpg' alt='Visit to Masaka')
-      .card-body
-        h5.card-title Visit to Masaka
-        p.card-text
-          | UG Anfield fans had an amazing visit to Masaka, including a friendly match where they won a goat!
-        p
-          strong Date:
-          |  October 15, 2024
-        p
-          strong Location:
-          |  Masaka
-        a.btn.btn-secondary(href='#') View Recap
-    // Event 4
-    .card
-      img(src='images/UgA red.jpg' alt='Tour in Jinja')
-      .card-body
-        h5.card-title Tour in Jinja
-        p.card-text UG Anfield members enjoyed a thrilling tour in Jinja.
-        p
-          strong Date:
-          |  September 28, 2024
-        p
-          strong Location:
-          |  Jinja
-        a.btn.btn-secondary(href='#') View Recap
-// Footer Section
-footer.bg-dark.text-white.text-center.p-3
-  .container
+  h3.text-center.mb-4 Upcoming Events
+  .row.justify-content-center.g-4
+    .col-md-6.col-lg-4
+      .card.shadow-sm
+        img(src='images/new1.jpg' alt='End of Year Party' class='card-img-top')
+        .card-body.text-center
+          h5.card-title Trophy Parade Double Decker (UG Anfield)
+          p.card-text Enjoy a fun-filled event with Liverpool fans from UG Anfield.
+          p
+            strong Date:
+            |  31st May to 1st June
+          p
+            strong Location:
+            |  Banana Beach, Jinja
+          a.btn.btn-primary(href='#') More Details
+
+  h3.text-center.mb-4 Past Events
+  .row.justify-content-center.g-4
+    .col-md-6.col-lg-4
+      .card.shadow-sm
+        img(src='images/UgA goat.jpg' alt='Visit to Masaka' class='card-img-top')
+        .card-body.text-center
+          h5.card-title Visit to Masaka
+          p.card-text UG Anfield fans had an amazing visit to Masaka, including a friendly match where they won a goat!
+          p
+            strong Date:
+            |  October 15, 2024
+          p
+            strong Location:
+            |  Masaka
+          a.btn.btn-secondary(href='#') View Recap
+    .col-md-6.col-lg-4
+      .card.shadow-sm
+        img(src='images/UgA red.jpg' alt='Tour in Jinja' class='card-img-top')
+        .card-body.text-center
+          h5.card-title Tour in Jinja
+          p.card-text UG Anfield members enjoyed a thrilling tour in Jinja.
+          p
+            strong Date:
+            |  September 28, 2024
+          p
+            strong Location:
+            |  Jinja
+          a.btn.btn-secondary(href='#') View Recap
+
     p
       | Contact us at: 
       a.text-white(href='mailto:info@uganfield.com') info@uganfield.com

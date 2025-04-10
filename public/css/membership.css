@@ -1,157 +1,328 @@
-/* General Reset */
-/* Watermark Styling */
-body::before {
-    content: "UG Anfield";
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    width: 100vw;
-    height: 100vh;
-    background-image: url('/Images/wwliv.webp');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0.2;
-    z-index: -1;
-    transform: translate(-50%, -50%);
-    font-size: 5rem;
-    color: rgba(214, 40, 40, 0.1); /* Liverpool red, semi-transparent */
-    z-index: -1; /* Make sure it stays behind other content */
-    pointer-events: none; /* Allow clicking through the watermark */
-    user-select: none; /* Prevent text selection */
-}
-
-/* Optional: Watermark only on Membership Section */
-.container.my-5::before {
-    content: "UG Anfield";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 4rem;
-    color: rgba(214, 40, 40, 0.05); /* Adjust opacity if needed */
-    z-index: -1;
-    pointer-events: none;
-    user-select: none;
-}
-
-
-
-
-
-
-
-
-
-
+/* ===== GENERAL STYLES ===== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Navbar Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+    position: relative;
+    min-height: 100vh;
+}
+
+/* ===== WATERMARK STYLING ===== */
+body::before {
+    content: "";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('/images/logo.jpeg');
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.05;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+/* ===== NAVBAR STYLING ===== */
 .navbar {
     font-size: 1.1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    background-color: #212529 !important;
 }
 
-.navbar .navbar-brand {
-    font-weight: bold;
-    color: #d62828; /* Liverpool red color */
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #fff !important;
+    display: flex;
+    align-items: center;
 }
 
-.navbar .nav-link {
-    color: #ffffff;
+.logo {
+    height: 40px;
+    width: auto;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.nav-link {
+    color: #ffffff !important;
     transition: color 0.3s ease;
+    padding: 0.5rem 1rem !important;
+    font-weight: 500;
 }
 
-.navbar .nav-link:hover {
-    color: #d62828;
+.nav-link:hover {
+    color: #d62828 !important;
 }
 
-/* Title and Intro Section */
-h1.display-4 {
-    color: #d62828; /* Liverpool red */
-    font-weight: bold;
-}
-
-p.lead {
-    font-size: 1.2rem;
-    color: #555;
-}
-
-/* Section Headings */
-h2 {
-    color: #333;
+.nav-link.active {
+    color: #fff !important;
     font-weight: 600;
-    margin-top: 1.5rem;
+    border-bottom: 2px solid #d62828;
+}
+
+/* ===== CONTACT SECTION ===== */
+.contact-section {
+    padding: 5rem 0;
+}
+
+.contact-heading {
+    font-size: 2.5rem;
+    color: #212529;
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.contact-heading::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: #d62828;
+}
+
+.contact-intro {
+    font-size: 1.2rem;
+    color: #6c757d;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+/* ===== FORM STYLING ===== */
+.form-container {
+    background: #fff;
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 2rem;
+}
+
+.form-label {
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 0.5rem;
+}
+
+.form-control, .form-select {
+    padding: 0.8rem 1rem;
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+    transition: all 0.3s ease;
     margin-bottom: 1rem;
 }
 
-/* List Group Styling */
-.list-group-item {
-    font-size: 1rem;
-    background-color: #f8f9fa;
-    color: #333;
-    border: none;
-}
-
-.list-group-item:not(:last-child) {
-    border-bottom: 1px solid #ddd;
-}
-
-/* Form Styling */
-form .form-label {
-    font-weight: 500;
-    color: #333;
-}
-
-form .form-control,
-form .form-select {
-    border: 1px solid #ced4da;
-    border-radius: 0.3rem;
-    padding: 0.8rem;
-}
-
-form .form-control:focus,
-form .form-select:focus {
+.form-control:focus, .form-select:focus {
     border-color: #d62828;
-    box-shadow: 0 0 5px rgba(214, 40, 40, 0.3);
+    box-shadow: 0 0 0 0.25rem rgba(214, 40, 40, 0.15);
 }
 
-/* Submit Button Styling */
-.btn-primary {
-    background-color: #d62828; /* Liverpool red */
+.btn-send {
+    background-color: #d62828;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: 600;
     border: none;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: all 0.3s ease;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
-.btn-primary:hover {
-    background-color: #b22222; /* Darker red for hover */
+.btn-send:hover {
+    background-color: #b22222;
     transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(214, 40, 40, 0.2);
 }
 
-/* Form Section */
-.row .col-lg-6 {
-    padding: 1rem;
-    background-color: #f8f9fa;
+/* ===== CONTACT INFO CARDS ===== */
+.contact-info-card {
+    background: #fff;
+    padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+    height: 100%;
 }
 
-.text-center {
-    color: #555;
+.contact-info-card:hover {
+    transform: translateY(-5px);
 }
 
-/* Responsive Spacing Adjustments */
-@media (max-width: 768px) {
-    .navbar .navbar-brand {
-        font-size: 1.2rem;
-    }
-    .display-4 {
+.contact-info-card h4 {
+    color: #d62828;
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.contact-icon {
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+
+.contact-info-card p {
+    color: #495057;
+    margin-bottom: 0.5rem;
+}
+
+.contact-info-card a {
+    color: #495057;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info-card a:hover {
+    color: #d62828;
+}
+
+/* ===== FOOTER STYLING ===== */
+footer {
+    background-color: #212529;
+    padding: 2.5rem 0;
+    color: #fff;
+}
+
+.footer-heading {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.social-links a {
+    display: inline-block;
+    font-size: 1.5rem;
+    color: #fff;
+    margin-right: 1rem;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #d62828;
+    transform: translateY(-3px);
+}
+
+.footer-divider {
+    border-color: rgba(255, 255, 255, 0.1);
+    margin: 1.5rem 0;
+}
+
+.copyright {
+    color: #adb5bd;
+    font-size: 0.9rem;
+}
+
+/* ===== SCROLL TO TOP BUTTON ===== */
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #d62828;
+    color: white;
+    cursor: pointer;
+    padding: 12px 15px;
+    border-radius: 50%;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+#scrollToTopBtn:hover {
+    background-color: #b22222;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(214, 40, 40, 0.3);
+}
+
+/* ===== FORM STATUS MESSAGES ===== */
+#formStatus {
+    padding: 1rem;
+    border-radius: 4px;
+    text-align: center;
+    display: none;
+    margin-top: 1rem;
+    font-weight: 500;
+}
+
+#formStatus.success {
+    background-color: #d4edda;
+    color: #155724;
+    display: block;
+}
+
+#formStatus.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    display: block;
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media (max-width: 992px) {
+    .contact-heading {
         font-size: 2rem;
     }
-    p.lead {
+    
+    .contact-info-card {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.3rem;
+    }
+    
+    .logo {
+        height: 35px;
+    }
+    
+    .contact-heading {
+        font-size: 1.8rem;
+    }
+    
+    .form-container {
+        padding: 1.5rem;
+    }
+    
+    .contact-info-card {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact-heading {
+        font-size: 1.6rem;
+    }
+    
+    .contact-intro {
         font-size: 1rem;
+    }
+    
+    #scrollToTopBtn {
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 13px;
+        font-size: 16px;
     }
 }
