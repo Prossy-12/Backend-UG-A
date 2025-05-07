@@ -35,4 +35,8 @@ router.get("/events", (req, res) => {
 router.get("/news", (req ,res) =>{
   res.render("newsPage");
 })
+router.get("/thankyou", (req ,res) =>{
+  res.render("thankyoupage");
+})
+
 module.exports = router;

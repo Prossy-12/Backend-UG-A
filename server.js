@@ -11,16 +11,13 @@ const app = express();
 const server = http.createServer(app);
 const port = process.env.PORT || 3000;
 
-// Database Connection
-mongoose.connect(process.env.DATABASE_LOCAL, {
+/// Connect to MongoDB
+mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-});
-
-mongoose.connection
-  .once("open", () => console.log(" Connected to MongoDB"))
-  .on("error", (err) => console.error(` Database connection error: ${err.message}`));
-
+})
+.then(() => console.log('MongoDB connected'))
+.catch(err => console.log('MongoDB connection error:', err));
 // Set View Engine & Views Directory
 app.set("view engine", "pug");
 app.set("views", path.join(__dirname, "views"));
@@ -92,10 +89,12 @@ const pageRoutes = require("./routes/pageRoutes");
 const membershipRoutes = require("./routes/membershipRoutes");
 const contactRoutes = require("./routes/contactRoutes");
 
+
 // Use Routes
 app.use("/", pageRoutes);
 app.use("/", membershipRoutes);
 app.use("/", contactRoutes);
+
 
 // Contact Form Submission Route
 // This can also be moved entirely to contactRoutes.js if preferred
