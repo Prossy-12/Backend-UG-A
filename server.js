@@ -12,6 +12,8 @@ const server = http.createServer(app);
 const port = process.env.PORT || 3000;
 
 /// Connect to MongoDB
+// Make sure you set MONGODB_URI in your .env or Render environment variables.
+// Example: mongodb+srv://Ug-anfield:<db_password>@cluster0.lupxnrz.mongodb.net/uganfield?retryWrites=true&w=majority&appName=Cluster0
 mongoose.connect(process.env.MONGODB_URI)
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.log('MongoDB connection error:', err));
