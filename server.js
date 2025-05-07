@@ -12,12 +12,9 @@ const server = http.createServer(app);
 const port = process.env.PORT || 3000;
 
 /// Connect to MongoDB
-mongoose.connect(process.env.MONGODB_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
-.then(() => console.log('MongoDB connected'))
-.catch(err => console.log('MongoDB connection error:', err));
+mongoose.connect(process.env.MONGODB_URI)
+  .then(() => console.log('MongoDB connected'))
+  .catch(err => console.log('MongoDB connection error:', err));
 // Set View Engine & Views Directory
 app.set("view engine", "pug");
 app.set("views", path.join(__dirname, "views"));
@@ -181,61 +178,15 @@ app.post("/submit-form", async (req, res) => {
       `,
     };
     
-    transporter.sendMail(mailOptions, (error, info) => {
-      if (error) {
-        console.error(" Email error:", error);
-        return res.status(500).json({ message: "Error sending email" });
-      }
-      
-      // Send confirmation to the person who submitted the form
-      const confirmationEmail = {
-        from: process.env.EMAIL_USER,
-        to: email,
-        subject: "We've received your message - UG Anfield",
-        html: `
-          <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-            <h2 style="color: #d32f2f;">Thank You for Contacting UG Anfield</h2>
-            <p>Dear ${name},</p>
-            <p>We have received your message and will get back to you ${preferredContact === 'phone' ? 'with a call' : 'by email'} as soon as possible.</p>
-            <p>For your reference, here's a summary of your message:</p>
-            <div style="background-color: #f5f5f5; padding: 15px; border-radius: 5px; margin: 15px 0;">
-              <p><strong>Subject:</strong> ${subject || 'Website Inquiry'}</p>
-              <p><strong>Message:</strong> ${message}</p>
-            </div>
-            <p>If you need immediate assistance, please contact us directly at <a href="tel:+256123456789">+256 123 456 789</a>.</p>
-            <p><strong>Best regards,</strong><br>The UG Anfield Team</p>
-          </div>
-        `
-      };
-      
-      // Send confirmation email
-      transporter.sendMail(confirmationEmail, (confirmError) => {
-        if (confirmError) {
-          console.error(" Confirmation email error:", confirmError);
-        }
-        
-        res.status(200).json({ message: "Message sent & stored successfully" });
-      });
-    });
-  } catch (error) {
-    console.error(" Server error:", error);
-    res.status(500).json({ message: "Internal server error" });
+    await transporter.sendMail(mailOptions);
+    
+    res.redirect("/");
+  } catch (err) {
+    console.error("Error submitting form:", err);
+    res.status(500).send("An error occurred while submitting the form.");
   }
 });
 
-// 404 Error Handling
-app.use((req, res) => {
-  res.status(404).render("notFoundPage");
-});
-
-// Start the Server
-server.listen(port, () => console.log(`🚀 Server running on http://localhost:${port}`));
-
-// Handle Unexpected Errors
-process.on("unhandledRejection", (err) => {
-  console.error(" Unhandled Rejection:", err);
-});
-process.on("uncaughtException", (err) => {
-  console.error(" Uncaught Exception:", err);
-  process.exit(1);
+server.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 });
