@@ -1,124 +1,612 @@
+//- doctype html
+//- head
+//-   meta(charset='UTF-8')
+//-   meta(name='viewport' content='width=device-width, initial-scale=1.0')
+//-   title UG Anfield Media
+//-   // Bootstrap CSS
+//-   link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css' rel='stylesheet')
+//-   link(rel='stylesheet' href='/css/media.css')
+//-   // Custom styles
+//- // Navbar Section
+//- nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.py-2
+//-   .container.d-flex.align-items-center
+//-     // Logo
+//-     a.navbar-brand.d-flex.align-items-center(href='/home')
+//-       img.logo.me-2(src='images/logo.jpeg' alt='logo' style='height: 40px; width: auto;')
+//-       a.navbar-brand(href ='/') UG Anfield
+//-     // Navbar Toggler
+//-     button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
+//-       span.navbar-toggler-icon
+//-     // Navbar Links
+//-     #navbarNav.collapse.navbar-collapse
+//-       ul.navbar-nav.ms-auto
+//-         li.nav-item
+//-           a.nav-link(href='/about') About Us
+//-           li.nav-item
+//-             a.nav-link(href='/membership') Membership
+//-           li.nav-item
+//-             a.nav-link(href='/news') News &amp; Updates
+//-           li.nav-item
+//-             a.nav-link(href='/media') Media
+//-           li.nav-item
+//-             a.nav-link(href='/events') Events
+//-             li.nav-item
+//-             a.nav-link(href='/contact') Contact
+//-           li.nav-item
+//-             a.nav-link.active(href='/matches') Matches
+//- // Hero Section
+//- section.hero-section
+//-   .text-center.mb-4
+//-     h1.display-4 Welcome to UG Anfield Media
+//-     p.lead Relive the best moments with the Ugandan Liverpool Supporters Club
+//- // Gallery Section
+//- .container.my-5
+//-   h2.gallery-title.text-center Gallery
+//-   p.text-center Explore our photos and match highlights!
+//-   // Filters
+//-   .text-center.mb-4
+//-     button.btn.btn-danger.btn-filter(data-filter='all') All
+//-     button.btn.btn-danger.btn-filter(data-filter='photos') Photos
+//-     button.btn.btn-danger.btn-filter(data-filter='highlights') Highlights
+//-   // Media Grid
+//-   #media-grid.row.g-4.media-grid
+//-     // Photo Items
+//-     .col-sm-6.col-md-4.media-item(data-category='photos')
+//-       img.img-fluid.rounded(src='images/1.jpg' alt='Media Image 1')
+//-     .col-sm-6.col-md-4.media-item(data-category='photos')
+//-       img.img-fluid.rounded(src='images/10.jpg' alt='Media Image 2')
+//-     .col-sm-6.col-md-4.media-item(data-category='photos')
+//-       img.img-fluid.rounded(src='images/11.jpg' alt='Media Image 3')
+//-     .col-sm-6.col-md-4.media-item(data-category='photos')
+//-       img.img-fluid.rounded(src='images/5.jpg' alt='Media Image 3')
+//-     .col-sm-6.col-md-4.media-item(c='' data-category='photos')
+//-       img.img-fluid.rounded(src='images/14.jpg' alt='Media Image 3')
+//-     .col-sm-6.col-md-4.media-item(data-category='photos')
+//-       img.img-fluid.rounded(src='images/13.jpg' alt='Media Image 3')
+//-     .col-sm-6.col-md-4.media-item(data-category='photos')
+//-       img.img-fluid.rounded(src='images/15.jpg' alt='Media Image 3')
+//-     .col-sm-6.col-md-4.media-item(data-category='photos')
+//-       img.img-fluid.rounded(src='images/17.jpg' alt='Media Image 3')
+//-     .col-sm-6.col-md-4.media-item(data-category='photos')
+//-       img.img-fluid.rounded(src='images/16.jpg' alt='Media Image 3')
+//-     .col-sm-6.col-md-4.media-item(data-category='photos')
+//-       img.img-fluid.rounded(src='images/8.jpg' alt='Media Image 3')
+//-     .col-sm-6.col-md-4.media-item(data-category='photos')
+//-       img.img-fluid.rounded(src='images/7.jpg' alt='Media Image 3')
+//-     .col-sm-6.col-md-4.media-item(data-category='photos')
+//-       img.img-fluid.rounded(src='images/12.jpg' alt='Media Image 3')
+//-     .col-sm-6.col-md-4.media-item(data-category='photos')
+//-       img.img-fluid.rounded(src='images/6.jpg' alt='Media Image 3')
+//-     .col-sm-6.col-md-4.media-item(data-category='photos')
+//-       img.img-fluid.rounded(src='images/9.jpg' alt='Media Image 3')
+//-     .col-sm-6.col-md-4.media-item(data-category='photos')
+//-       img.img-fluid.rounded(src='images/4.jpg' alt='Media Image 3')
+//-     .col-sm-6.col-md-4.media-item(data-category='photos')
+//-       img.img-fluid.rounded(src='images/3.jpg' alt='Media Image 3')
+//-     .col-sm-6.col-md-4.media-item(data-category='photos')
+//-       img.img-fluid.rounded(src='images/white.jpg' alt='Media Image 3')
+//-     .col-sm-6.col-md-4.media-item(data-category='photos')
+//-       img.img-fluid.rounded(src='images/2q.jpg' alt='Media Image 3')
+//-     // Highlight Items
+//-     .col-sm-6.col-md-4.media-item(data-category='highlights')
+//-       img.img-fluid.rounded(src='images/ug1.jpg' alt='Highlight 1')
+//-       p.mt-2.text-center
+//-     .col-sm-6.col-md-4.media-item(data-category='highlights')
+//-       img.img-fluid.rounded(src='images/ug2.jpg' alt='Highlight 2')
+//-       p.mt-2.text-center
+//-       .col-sm-6.col-md-4.media-item(data-category='highlights')
+//-       img.img-fluid.rounded(src='images/ug3.jpg' alt='Highlight 3')
+//-       p.mt-2.text-center
+//-       .col-sm-6.col-md-4.media-item(data-category='highlights')
+//-       img.img-fluid.rounded(src='images/ug4.jpg' alt='Highlight 4')
+//-       p.mt-2.text-center
+//-       .col-sm-6.col-md-4.media-item(data-category='highlights')
+//-       img.img-fluid.rounded(src='images/ug5.jpg' alt='Highlight 5')
+//-       p.mt-2.text-center
+//-       .col-sm-6.col-md-4.media-item(data-category='highlights')
+//-       img.img-fluid.rounded(src='images/ug6.jpg' alt='Highlight 6')
+//-       p.mt-2.text-center
+//-       .col-sm-6.col-md-4.media-item(data-category='highlights')
+//-       img.img-fluid.rounded(src='images/ug7.jpg' alt='Highlight 7')
+//-       p.mt-2.text-center
+//-        img.img-fluid.rounded(src='images/ug8.jpg' alt='Highlight 8')
+//-       p.mt-2.text-center
+//-        img.img-fluid.rounded(src='images/ug9.jpg' alt='Highlight 9')
+//-       p.mt-2.text-center
+//-        img.img-fluid.rounded(src='images/ug10.jpg' alt='Highlight 10')
+//-       p.mt-2.text-center
+//- // Footer Section
+//- footer.bg-dark.text-white.text-center.p-3
+//-   .container
+//-     p
+//-       | Contact us at: 
+//-       a.text-white(href='mailto:Uganfield0@gmail.com') Uganfield0@gmail.com
+//-       |  | Follow us on: 
+//-       a.text-white(href='https://tiktok.com/@ug.anfield.official') TikTok
+//-       | , 
+//-       a.text-white(href='https://www.instagram.com/uganfield?igsh=ZGUzMzM3NWJiOQ==') Instagram
+//-       | , 
+//-       a.text-white(href='https://www.facebook.com/profile.php?id=61566677184223') Facebook
+//-       a.text-white(href='https://chat.whatsapp.com/IwDs17g4SsQ7MjDrHupncl') WhatsApp
+//-       a.text-white(href='https://youtube.com/@uganfield9483?si=ypdnMDpstRGo0Ba3') YouTube
+
+//-     p &copy; 2024 UG Anfield. All rights reserved.
+//- // Bootstrap JS
+//- script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js')
+//- script.
+//-   // Filter functionality
+//-   document.querySelectorAll('.btn-filter').forEach(button => {
+//-   button.addEventListener('click', () => {
+//-   const filter = button.getAttribute('data-filter');
+//-   document.querySelectorAll('.media-item').forEach(item => {
+//-   item.style.display = (filter === 'all' || item.getAttribute('data-category') === filter) ? 'block' : 'none';
+//-   });
+//-   });
+//-   });
+
+
+
+
+
 doctype html
+html(lang='en')
 head
   meta(charset='UTF-8')
   meta(name='viewport' content='width=device-width, initial-scale=1.0')
   title UG Anfield Media
   // Bootstrap CSS
   link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css' rel='stylesheet')
+  // Font Awesome for icons
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css')
   link(rel='stylesheet' href='/css/media.css')
-  // Custom styles
-// Navbar Section
-nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.py-2
-  .container.d-flex.align-items-center
-    // Logo
-    a.navbar-brand.d-flex.align-items-center(href='/home')
-      img.logo.me-2(src='images/logo.jpeg' alt='logo' style='height: 40px; width: auto;')
-      a.navbar-brand(href ='/') UG Anfield
-    // Navbar Toggler
-    button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
-      span.navbar-toggler-icon
-    // Navbar Links
-    #navbarNav.collapse.navbar-collapse
-      ul.navbar-nav.ms-auto
-        li.nav-item
-          a.nav-link(href='/about') About Us
-          li.nav-item
-            a.nav-link(href='/membership') Membership
-          li.nav-item
-            a.nav-link(href='/news') News &amp; Updates
-          li.nav-item
-            a.nav-link(href='/media') Media
-          li.nav-item
-            a.nav-link(href='/events') Events
-            li.nav-item
-            a.nav-link(href='/contact') Contact
-          li.nav-item
-            a.nav-link.active(href='/matches') Matches
-// Hero Section
-section.hero-section
-  .text-center.mb-4
-    h1.display-4 Welcome to UG Anfield Media
-    p.lead Relive the best moments with the Ugandan Liverpool Supporters Club
-// Gallery Section
-.container.my-5
-  h2.gallery-title.text-center Gallery
-  p.text-center Explore our photos and match highlights!
-  // Filters
-  .text-center.mb-4
-    button.btn.btn-danger.btn-filter(data-filter='all') All
-    button.btn.btn-danger.btn-filter(data-filter='photos') Photos
-    button.btn.btn-danger.btn-filter(data-filter='highlights') Highlights
-  // Media Grid
-  #media-grid.row.g-4.media-grid
-    // Photo Items
-    .col-sm-6.col-md-4.media-item(data-category='photos')
-      img.img-fluid.rounded(src='images/1.jpg' alt='Media Image 1')
-    .col-sm-6.col-md-4.media-item(data-category='photos')
-      img.img-fluid.rounded(src='images/10.jpg' alt='Media Image 2')
-    .col-sm-6.col-md-4.media-item(data-category='photos')
-      img.img-fluid.rounded(src='images/11.jpg' alt='Media Image 3')
-    .col-sm-6.col-md-4.media-item(data-category='photos')
-      img.img-fluid.rounded(src='images/5.jpg' alt='Media Image 3')
-    .col-sm-6.col-md-4.media-item(c='' data-category='photos')
-      img.img-fluid.rounded(src='images/14.jpg' alt='Media Image 3')
-    .col-sm-6.col-md-4.media-item(data-category='photos')
-      img.img-fluid.rounded(src='images/13.jpg' alt='Media Image 3')
-    .col-sm-6.col-md-4.media-item(data-category='photos')
-      img.img-fluid.rounded(src='images/15.jpg' alt='Media Image 3')
-    .col-sm-6.col-md-4.media-item(data-category='photos')
-      img.img-fluid.rounded(src='images/17.jpg' alt='Media Image 3')
-    .col-sm-6.col-md-4.media-item(data-category='photos')
-      img.img-fluid.rounded(src='images/16.jpg' alt='Media Image 3')
-    .col-sm-6.col-md-4.media-item(data-category='photos')
-      img.img-fluid.rounded(src='images/8.jpg' alt='Media Image 3')
-    .col-sm-6.col-md-4.media-item(data-category='photos')
-      img.img-fluid.rounded(src='images/7.jpg' alt='Media Image 3')
-    .col-sm-6.col-md-4.media-item(data-category='photos')
-      img.img-fluid.rounded(src='images/12.jpg' alt='Media Image 3')
-    .col-sm-6.col-md-4.media-item(data-category='photos')
-      img.img-fluid.rounded(src='images/6.jpg' alt='Media Image 3')
-    .col-sm-6.col-md-4.media-item(data-category='photos')
-      img.img-fluid.rounded(src='images/9.jpg' alt='Media Image 3')
-    .col-sm-6.col-md-4.media-item(data-category='photos')
-      img.img-fluid.rounded(src='images/4.jpg' alt='Media Image 3')
-    .col-sm-6.col-md-4.media-item(data-category='photos')
-      img.img-fluid.rounded(src='images/3.jpg' alt='Media Image 3')
-    .col-sm-6.col-md-4.media-item(data-category='photos')
-      img.img-fluid.rounded(src='images/white.jpg' alt='Media Image 3')
-    .col-sm-6.col-md-4.media-item(data-category='photos')
-      img.img-fluid.rounded(src='images/2q.jpg' alt='Media Image 3')
-    // Highlight Items
-    .col-sm-6.col-md-4.media-item(data-category='highlights')
-      img.img-fluid.rounded(src='images/highlight1.jpg' alt='Highlight 1')
-      p.mt-2.text-center
-    .col-sm-6.col-md-4.media-item(data-category='highlights')
-      img.img-fluid.rounded(src='images/highlight2.jpg' alt='Highlight 2')
-      p.mt-2.text-center
-// Footer Section
-footer.bg-dark.text-white.text-center.p-3
-  .container
-    p
-      | Contact us at: 
-      a.text-white(href='mailto:Uganfield0@gmail.com') Uganfield0@gmail.com
-      |  | Follow us on: 
-      a.text-white(href='https://tiktok.com/@ug.anfield.official') TikTok
-      | , 
-      a.text-white(href='https://www.instagram.com/uganfield?igsh=ZGUzMzM3NWJiOQ==') Instagram
-      | , 
-      a.text-white(href='https://www.facebook.com/profile.php?id=61566677184223') Facebook
-      a.text-white(href='https://chat.whatsapp.com/IwDs17g4SsQ7MjDrHupncl') WhatsApp
-      a.text-white(href='https://youtube.com/@uganfield9483?si=ypdnMDpstRGo0Ba3') YouTube
+  style.
+    .gallery-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 8px;
+      overflow: hidden;
+      border: none;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      height: 100%;
+    }
+    .gallery-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+    .gallery-card img {
+      transition: transform 0.5s ease;
+      height: 250px;
+      width: 100%;
+      object-fit: cover;
+    }
+    .gallery-card:hover img {
+      transform: scale(1.05);
+    }
+    .gallery-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(transparent, rgba(0,0,0,0.8));
+      padding: 15px;
+      color: white;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.3s ease;
+    }
+    .gallery-card:hover .gallery-caption {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .video-badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: rgba(220, 53, 69, 0.85);
+      padding: 5px 10px;
+      border-radius: 4px;
+      color: white;
+    }
 
-    p &copy; 2024 UG Anfield. All rights reserved.
-// Bootstrap JS
-script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js')
-script.
-  // Filter functionality
-  document.querySelectorAll('.btn-filter').forEach(button => {
-  button.addEventListener('click', () => {
-  const filter = button.getAttribute('data-filter');
-  document.querySelectorAll('.media-item').forEach(item => {
-  item.style.display = (filter === 'all' || item.getAttribute('data-category') === filter) ? 'block' : 'none';
-  });
-  });
-  });
+body
+  // Navbar Section
+  nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.sticky-top
+    .container
+      a.navbar-brand.d-flex.align-items-center(href='/home')
+        img.logo.me-2(src='images/logo.jpeg' alt='logo' style='height: 40px;')
+        | UG Anfield
+      button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarNav')
+        span.navbar-toggler-icon
+      #navbarNav.collapse.navbar-collapse
+        ul.navbar-nav.ms-auto
+          li.nav-item: a.nav-link(href='/about') About
+          li.nav-item: a.nav-link(href='/membership') Membership
+          li.nav-item: a.nav-link(href='/news') News
+          li.nav-item: a.nav-link.active(href='/media') Media
+          li.nav-item: a.nav-link(href='/events') Events
+          li.nav-item: a.nav-link(href='/contact') Contact
+          li.nav-item: a.nav-link(href='/matches') Matches
+
+  // Hero Section
+  section.hero-section.text-center.py-5.bg-dark.text-white
+    .container
+      h1.display-4.fw-bold UG Anfield Media
+      p.lead.fs-5 Relive the best moments with the Ugandan Liverpool Supporters Club
+
+  // Gallery Section
+  .container.py-5
+    .text-center.mb-5
+      h2.display-5.fw-bold.mb-3 Our Gallery
+      p.lead.text-muted Explore our photos, match highlights and club events
+
+    // Filters
+    .d-flex.justify-content-center.mb-5
+      .btn-group.shadow-sm
+        button.btn.btn-outline-danger.active(type='button' data-filter='all') All Media
+        //- button.btn.btn-outline-danger(type='button' data-filter='photos') Photos
+        button.btn.btn-outline-danger(type='button' data-filter='highlights') Highlights
+
+    // Media Grid - 3 per row
+    #media-grid.row.row-cols-1.row-cols-md-2.row-cols-lg-3.g-4
+      // Photo Items
+      .col.media-item(data-category='photos')
+        .card.h-100.gallery-card
+          img(src='images/1.jpg' alt='Media Image 1')
+          .gallery-caption
+            h5.mb-1 
+            small 
+
+      .col.media-item(data-category='photos')
+        .card.h-100.gallery-card
+          img(src='images/10.jpg' alt='Media Image 2')
+          .gallery-caption
+            h5.mb-1 
+            small 
+
+      .col.media-item(data-category='photos')
+        .card.h-100.gallery-card
+          img(src='images/11.jpg' alt='Media Image 3')
+          .gallery-caption
+            h5.mb-1 
+            small 
+
+      .col.media-item(data-category='photos')
+        .card.h-100.gallery-card
+          img(src='images/5.jpg' alt='Media Image 4')
+          .gallery-caption
+            h5.mb-1 
+            small 
+
+      .col.media-item(data-category='photos')
+        .card.h-100.gallery-card
+          img(src='images/14.jpg' alt='Media Image 5')
+          .gallery-caption
+            h5.mb-1 
+            small 
+
+      .col.media-item(data-category='photos')
+        .card.h-100.gallery-card
+          img(src='images/13.jpg' alt='Media Image 6')
+          .gallery-caption
+            h5.mb-1 
+            small 
+
+      .col.media-item(data-category='photos')
+        .card.h-100.gallery-card
+          img(src='images/15.jpg' alt='Media Image 7')
+          .gallery-caption
+            h5.mb-1 
+            small 
+
+      .col.media-item(data-category='photos')
+        .card.h-100.gallery-card
+          img(src='images/17.jpg' alt='Media Image 8')
+          .gallery-caption
+            h5.mb-1 
+            small 
+
+      .col.media-item(data-category='photos')
+        .card.h-100.gallery-card
+          img(src='images/16.jpg' alt='Media Image 9')
+          .gallery-caption
+            h5.mb-1 
+            small 
+
+      .col.media-item(data-category='photos')
+        .card.h-100.gallery-card
+          img(src='images/8.jpg' alt='Media Image 10')
+          .gallery-caption
+            h5.mb-1 
+            small 
+
+      .col.media-item(data-category='photos')
+        .card.h-100.gallery-card
+          img(src='images/7.jpg' alt='Media Image 11')
+          .gallery-caption
+            h5.mb-1 
+            small 
+
+      .col.media-item(data-category='photos')
+        .card.h-100.gallery-card
+          img(src='images/12.jpg' alt='Media Image 12')
+          .gallery-caption
+            h5.mb-1 
+            small 
+
+      .col.media-item(data-category='photos')
+        .card.h-100.gallery-card
+          img(src='images/6.jpg' alt='Media Image 13')
+          .gallery-caption
+            h5.mb-1 
+            small 
+
+      .col.media-item(data-category='photos')
+        .card.h-100.gallery-card
+          img(src='images/9.jpg' alt='Media Image 14')
+          .gallery-caption
+            h5.mb-1 
+            small 5 
+
+      .col.media-item(data-category='photos')
+        .card.h-100.gallery-card
+          img(src='images/4.jpg' alt='Media Image 15')
+          .gallery-caption
+            h5.mb-1
+            small 
+
+      .col.media-item(data-category='photos')
+        .card.h-100.gallery-card
+          img(src='images/3.jpg' alt='Media Image 16')
+          .gallery-caption
+            h5.mb-1 
+            small 
+
+      .col.media-item(data-category='photos')
+        .card.h-100.gallery-card
+          img(src='images/white.jpg' alt='Media Image 17')
+          .gallery-caption
+            h5.mb-1 
+            small 
+
+      .col.media-item(data-category='photos')
+        .card.h-100.gallery-card
+          img(src='images/2q.jpg' alt='Media Image 18')
+          .gallery-caption
+            h5.mb-1 
+            small 
+
+      // Highlight Items
+      .col.media-item(data-category='highlights')
+        .card.h-100.gallery-card
+          .position-relative
+            img(src='images/ug1.jpg' alt='Highlight 1')
+            .video-badge
+              i.fas.fa-play.me-1
+              | Highlight
+          .gallery-caption
+            h5.mb-1 
+            small 
+
+      .col.media-item(data-category='highlights')
+        .card.h-100.gallery-card
+          .position-relative
+            img(src='images/ug2.jpg' alt='Highlight 2')
+            .video-badge
+              i.fas.fa-play.me-1
+              | Highlight
+          .gallery-caption
+            h5.mb-1 
+            small 
+
+      .col.media-item(data-category='highlights')
+        .card.h-100.gallery-card
+          .position-relative
+            img(src='images/ug3.jpg' alt='Highlight 3')
+            .video-badge
+              i.fas.fa-play.me-1
+              | Highlight
+          .gallery-caption
+            h5.mb-1 
+            small 
+
+      .col.media-item(data-category='highlights')
+        .card.h-100.gallery-card
+          .position-relative
+            img(src='images/ug4.jpg' alt='Highlight 4')
+            .video-badge
+              i.fas.fa-play.me-1
+              | Highlight
+          .gallery-caption
+            h5.mb-1 
+            small
+
+      .col.media-item(data-category='highlights')
+        .card.h-100.gallery-card
+          .position-relative
+            img(src='images/ug5.jpg' alt='Highlight 5')
+            .video-badge
+              i.fas.fa-play.me-1
+              | Highlight
+          .gallery-caption
+            h5.mb-1 
+            small 
+
+      .col.media-item(data-category='highlights')
+        .card.h-100.gallery-card
+          .position-relative
+            img(src='images/ug6.jpg' alt='Highlight 6')
+            .video-badge
+              i.fas.fa-play.me-1
+              | Highlight
+          .gallery-caption
+            h5.mb-1 
+            small 
+
+      .col.media-item(data-category='highlights')
+        .card.h-100.gallery-card
+          .position-relative
+            img(src='images/ug7.jpg' alt='Highlight 7')
+            .video-badge
+              i.fas.fa-play.me-1
+              | Highlight
+          .gallery-caption
+            h5.mb-1 
+            small vs 
+
+      .col.media-item(data-category='highlights')
+        .card.h-100.gallery-card
+          .position-relative
+            img(src='images/ug8.jpg' alt='Highlight 8')
+            .video-badge
+              i.fas.fa-play.me-1
+              | Highlight
+          .gallery-caption
+            h5.mb-1 
+            small 
+
+      .col.media-item(data-category='highlights')
+        .card.h-100.gallery-card
+          .position-relative
+            img(src='images/ug9.jpg' alt='Highlight 9')
+            .video-badge
+              i.fas.fa-play.me-1
+              | Highlight
+          .gallery-caption
+            h5.mb-1 
+            small 
+
+      .col.media-item(data-category='highlights')
+        .card.h-100.gallery-card
+          .position-relative
+            img(src='images/ug10.jpg' alt='Highlight 10')
+            .video-badge
+              i.fas.fa-play.me-1
+              | Highlight
+          .gallery-caption
+            h5.mb-1 
+            small 
+             
+
+    // Load More Button
+    .text-center.mt-5
+      button#loadMore.btn.btn-danger.btn-lg.rounded-pill.px-5
+        i.fas.fa-plus.me-2
+        | Load More Images
+
+  // Footer Section
+  footer.bg-dark.text-white.pt-5.pb-4
+    .container
+      .row.g-4
+        .col-md-4
+          h5 UG Anfield
+          p.mt-3 The official Liverpool FC supporters club in Uganda bringing together passionate fans.
+          .social-icons.mt-4
+            a.text-white.me-3(href='https://tiktok.com/@ug.anfield.official')
+              i.fab.fa-tiktok.fa-lg
+            a.text-white.me-3(href='https://www.instagram.com/uganfield')
+              i.fab.fa-instagram.fa-lg
+            a.text-white.me-3(href='https://www.facebook.com/profile.php?id=61566677184223')
+              i.fab.fa-facebook.fa-lg
+            a.text-white.me-3(href='https://chat.whatsapp.com/IwDs17g4SsQ7MjDrHupncl')
+              i.fab.fa-whatsapp.fa-lg
+            a.text-white(href='https://youtube.com/@uganfield9483')
+              i.fab.fa-youtube.fa-lg
+        
+        .col-md-4
+          h5 Quick Links
+          ul.list-unstyled.mt-3
+            li.mb-2: a.text-white.text-decoration-none(href='/about') About Us
+            li.mb-2: a.text-white.text-decoration-none(href='/membership') Membership
+            li.mb-2: a.text-white.text-decoration-none(href='/events') Upcoming Events
+            li.mb-2: a.text-white.text-decoration-none(href='/contact') Contact Us
+            li: a.text-white.text-decoration-none(href='/matches') Match Schedule
+        
+        .col-md-4
+          h5 Contact Info
+          ul.list-unstyled.mt-3
+            li.mb-2
+              i.fas.fa-envelope.me-2
+              | Uganfield0@gmail.com
+            li.mb-2
+              i.fas.fa-phone.me-2
+              | +256 772 123 456
+            li.mb-2
+              i.fas.fa-map-marker-alt.me-2
+              | Kampala, Uganda
+            li
+              i.fas.fa-clock.me-2
+              | Match Days: Open 24/7
+
+      .text-center.mt-5.pt-3.border-top
+        p.mb-0 &copy; 2024 UG Anfield. All rights reserved.
+
+  // Lightbox Modal
+  #lightboxModal.modal.fade(tabindex='-1')
+    .modal-dialog.modal-dialog-centered.modal-xl
+      .modal-content.bg-transparent.border-0
+        .modal-body.text-center
+          img#lightboxImage.img-fluid.rounded.shadow-lg(src='' alt='')
+          button.btn.btn-danger.position-absolute.top-0.end-0.m-3.rounded-circle(type='button' data-bs-dismiss='modal')
+            i.fas.fa-times
+
+  // Bootstrap JS and custom script
+  script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js')
+  script.
+    document.addEventListener('DOMContentLoaded', function() {
+      // Filter functionality
+      const filterButtons = document.querySelectorAll('.btn-group .btn');
+      const mediaItems = document.querySelectorAll('.media-item');
+      
+      filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          // Update active state
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          this.classList.add('active');
+          
+          // Filter items
+          const filter = this.getAttribute('data-filter');
+          mediaItems.forEach(item => {
+            if (filter === 'all' || item.getAttribute('data-category') === filter) {
+              item.style.display = 'block';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        });
+      });
+      
+      // Lightbox functionality
+      const lightboxModal = new bootstrap.Modal(document.getElementById('lightboxModal'));
+      const lightboxImage = document.getElementById('lightboxImage');
+      
+      document.querySelectorAll('.gallery-card img').forEach(img => {
+        img.addEventListener('click', () => {
+          lightboxImage.src = img.src;
+          lightboxModal.show();
+        });
+      });
+      
+      // Load more functionality
+      const loadMoreBtn = document.getElementById('loadMore');
+      const allItems = document.querySelectorAll('.media-item');
+      const itemsPerLoad = 9;
+      let visibleItems = itemsPerLoad;
+      
+      // Initially show only first set
+      allItems.forEach((item, index) => {
+        if (index >= visibleItems) {
+          item.style.display = 'none';
+        }
+      });
+      
+      loadMoreBtn.addEventListener('click', () => {
+        visibleItems += itemsPerLoad;
+        allItems.forEach((item, index) => {
+          item.style.display = index < visibleItems ? 'block' : 'none';
+        });
+        
+        // Hide button if all items are visible
+        if (visibleItems >= allItems.length) {
+          loadMoreBtn.style.display = 'none';
+        }
+      });
+    });

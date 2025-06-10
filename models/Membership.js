@@ -1,27 +1,12 @@
 const mongoose = require('mongoose');
 
-const membershipSchema = new mongoose.Schema({
-  name: {
-    type: String,
-    required: true
-  },
-  email: {
-    type: String,
-    required: true
-  },
-  phone: {
-    type: String,
-    required: true
-  },
-  membershipType: {
-    type: String,
-    enum: ['standard', 'premium'],
-    required: true
-  },
-  createdAt: {
-    type: Date,
-    default: Date.now
-  }
+const MembershipSchema = new mongoose.Schema({
+  fullName: { type: String, required: true },
+  email: { type: String, required: true },
+  phone: { type: String, required: true },
+  membershipType: { type: String, required: true },
+  date: { type: Date, default: Date.now }
 });
 
-module.exports = mongoose.model('Membership', membershipSchema); 
+// This line is important - it prevents the model from being redefined
+module.exports = mongoose.models.Membership || mongoose.model('Membership', MembershipSchema);

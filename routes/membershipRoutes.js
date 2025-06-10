@@ -9,7 +9,7 @@ const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
     user: 'desireasiimwe01@gmail.com', // Replace with your email
-    pass: '@Asiimwe24'   // Replace with your email password or app password
+    pass: 'ckbwryvcwnxagaoq'   // Replace with your email password or app password
   }
 });
 
@@ -19,53 +19,57 @@ router.get('/membership', (req, res) => {
 });
 
 // Handle form submission
-router.post('/membership', (req, res) => {
-  const { name, email, phone, membershipType } = req.body;
+router.post('/membership', async (req, res) => {
+  try {
+    const { fullName, email, phone, membershipType } = req.body;
 
-  // Basic validation
-  if (!name || !email || !phone || !membershipType) {
-    return res.status(400).json({ 
+    // Basic validation
+    if (!fullName || !email || !phone || !membershipType) {
+      return res.status(400).json({ 
+        success: false, 
+        message: 'All fields are required!' 
+      });
+    }
+
+    // Create a new membership record
+    const newMembership = new Membership({
+      fullName,
+      email,
+      phone,
+      membershipType,
+    });
+
+    // Save to the database
+    await newMembership.save();
+
+    // Send email notification
+    const mailOptions = {
+      from: 'desireasiimwe01@gmail.com',
+      to: 'desireasiimwe01@gmail.com',
+      subject: 'New Membership Application',
+      text: `New membership application received:
+        
+Full Name: ${fullName}
+Email: ${email}
+Phone: ${phone}
+Membership Type: ${membershipType}`
+    };
+
+    await transporter.sendMail(mailOptions);
+
+    // Send success response
+    return res.json({ 
+      success: true, 
+      message: 'Membership application submitted successfully!' 
+    });
+
+  } catch (err) {
+    console.error('Error processing membership:', err);
+    return res.status(500).json({ 
       success: false, 
-      message: 'All fields are required!' 
+      message: 'Server error, please try again.' 
     });
   }
-
-  // Create a new membership record
-  const newMembership = new Membership({
-    name,
-    email,
-    phone,
-    membershipType,
-  });
-
-  // Save to the database
-  newMembership.save()
-    .then(() => {
-      // Send email notification
-      const mailOptions = {
-        from: 'desireasiimwe01@gmail.com', // Replace with your email
-        to: 'desireasiimwe01@gmail.com',
-        subject: 'New Membership Application',
-        text: `New membership application received:\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nMembership Type: ${membershipType}`
-      };
-
-      transporter.sendMail(mailOptions, (error, info) => {
-        if (error) {
-          console.log('Error sending email:', error);
-          return res.json({ success: true, message: 'Membership application submitted, but email failed to send.' });
-        } else {
-          console.log('Email sent:', info.response);
-          return res.json({ success: true, message: 'Membership application submitted successfully!' });
-        }
-      });
-    })
-    .catch(err => {
-      console.log('Error saving membership: ', err);
-      res.status(500).json({ 
-        success: false, 
-        message: 'Server error, please try again.' 
-      });
-    });
 });
 
 module.exports = router;
