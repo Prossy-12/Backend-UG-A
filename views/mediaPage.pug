@@ -211,7 +211,7 @@ body
   // Navbar Section
   nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.sticky-top
     .container
-      a.navbar-brand.d-flex.align-items-center(href='/home')
+      a.navbar-brand.d-flex.align-items-center(href='/')
         img.logo.me-2(src='images/logo.jpeg' alt='logo' style='height: 40px;')
         | UG Anfield
       button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarNav')
@@ -242,7 +242,7 @@ body
     .d-flex.justify-content-center.mb-5
       .btn-group.shadow-sm
         button.btn.btn-outline-danger.active(type='button' data-filter='all') All Media
-        //- button.btn.btn-outline-danger(type='button' data-filter='photos') Photos
+        button.btn.btn-outline-danger(type='button' data-filter='UG.Anfield Football Team') UG.Anfield Football Team
         button.btn.btn-outline-danger(type='button' data-filter='highlights') Highlights
 
     // Media Grid - 3 per row
@@ -486,6 +486,90 @@ body
             small 
              
 
+
+// Team Section - Added here
+section.team-section.py-5.bg-light
+  .container
+    .text-center.mb-5
+      h2.display-5.fw-bold.mb-3.section-title Meet the UG.Anfield Team
+      p.lead.text-muted UG Anfield team members are passionate Liverpool FC supporters dedicated to bringing the best experience to our fans in Uganda. 
+
+    // Team Grid - 3 per row
+    .row.row-cols-1.row-cols-md-2.row-cols-lg-3.g-4
+      // Team Member 1
+      .col.team-item
+        .card.h-100.gallery-card
+          img(src='images/ugt1.jpg' alt='UG Anfield')
+          .gallery-caption
+            h5.mb-1 
+            small 
+
+      // Team Member 2
+      .col.team-item
+        .card.h-100.gallery-card
+          img(src='images/ugt2.jpg' alt='UG Anfield')
+          .gallery-caption
+            h5.mb-1 
+            small 
+
+      // Team Member 3
+      .col.team-item
+        .card.h-100.gallery-card
+          img(src='images/ugt3.jpg' alt='UG Anfield')
+          .gallery-caption
+            h5.mb-1 
+            small 
+
+      // Team Member 4
+      .col.team-item
+        .card.h-100.gallery-card
+          img(src='images/ugt4.jpg' alt='UG Anfield')
+          .gallery-caption
+            h5.mb-1 
+            small 
+
+      // Team Member 5
+      .col.team-item
+        .card.h-100.gallery-card
+          img(src='images/ugt6.jpg' alt='UG Anfield')
+          .gallery-caption
+            h5.mb-1 
+            small 
+
+      // Team Member 6
+      .col.team-item
+        .card.h-100.gallery-card
+          img(src='images/ugt11.jpg' alt='UG Anfield')
+          .gallery-caption
+            h5.mb-1 
+            small 
+
+
+             // Team Member 7
+      .col.team-item
+        .card.h-100.gallery-card
+          img(src='images/ugt7.jpg' alt='UG Anfield')
+          .gallery-caption
+            h5.mb-1 
+            small 
+
+
+             // Team Member 8
+      .col.team-item
+        .card.h-100.gallery-card
+          img(src='images/ugt8.jpg' alt='UG Anfield')
+          .gallery-caption
+            h5.mb-1 
+            small 
+
+             // Team Member 9
+      .col.team-item
+        .card.h-100.gallery-card
+          img(src='images/ugt9.jpg' alt='UG Anfield')
+          .gallery-caption
+            h5.mb-1 
+            small 
+
     // Load More Button
     .text-center.mt-5
       button#loadMore.btn.btn-danger.btn-lg.rounded-pill.px-5
@@ -528,7 +612,7 @@ body
               | Uganfield0@gmail.com
             li.mb-2
               i.fas.fa-phone.me-2
-              | +256 772 123 456
+              | 256 753 677802
             li.mb-2
               i.fas.fa-map-marker-alt.me-2
               | Kampala, Uganda
